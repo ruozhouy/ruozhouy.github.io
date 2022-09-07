@@ -1,0 +1,114 @@
+@charset "UTF-8";
+/* CSS Document */
+
+body {
+	font-size: 16px !important;
+}
+
+.two_column_ul {
+	/*text-decoration: line-through !important;*/
+  columns: 2;
+  -webkit-columns: 2;
+  -moz-columns: 2;
+}
+
+.no_margin {
+	 margin-bottom: 0em !important;
+}
+
+.pub_me {
+	text-decoration: underline !important;
+}
+
+/* .pub_stu {
+	text-decoration: underline !important;
+} */
+
+#publications .pub_title {
+	display: inline-block;
+	padding-top: 0.5em;
+	font-size: medium;
+}
+
+.r_cur_projs {
+	font-size: 16px;
+}
+
+.r_cur_projs .subtitle {
+	padding-bottom: 0.5em;
+	font-size: 24px;
+}
+
+.r_cur_projs .subtitle .proj_page {
+	font-size: 16px;
+}
+
+.r_cur_projs_text {
+	font-size: 16px;
+}
+
+.r_cur_projs_image {
+	width: 350px;
+	margin-right: 30px;
+}
+
+.proj_personnel {
+	text-align: center;
+}
+
+.proj_personnel_img {
+	height: 150px;
+}
+
+
+
+
+.dataset_entry {
+	/*padding-bottom: 15px;*/
+}
+
+a:hover {
+  cursor: pointer;
+}
+
+
+
+
+.stu_block {
+	margin-top: 2em;
+}
+.stu_pic {
+	display: inline-block;
+	margin-right: 2em;
+	vertical-align: middle;
+}
+.stu_txt {
+	display: inline-block;
+	vertical-align: middle;
+}
+
+
+
+
+#news_showmore {
+	font-size: 0.5em;
+	display: inline-block;
+	vertical-align: middle;
+	line-height: normal;
+	text-decoration: none !important; 
+}
+#news_showmore a {
+	text-decoration: none !important; 
+}
+
+#news_showless {
+	font-size: 0.5em;
+	display: inline-block;
+	vertical-align: middle;
+	line-height: normal;
+	text-decoration: none !important; 
+}
+#news_showless a {
+	text-decoration: none !important; 
+}
+

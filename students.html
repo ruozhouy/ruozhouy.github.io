@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Ruozhou Yu @ NCSU</title>
+<!-- News JS function -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+<script type="text/JavaScript">
+    document.addEventListener("DOMContentLoaded",function(){
+        function addx(incl, idx){
+            fetch(incl).then(incl=>incl.text()).then(incl=>idx(incl))
+        }
+        let incl = document.getElementsByTagName("include");
+        for(var i = 0; i < incl.length; i++){
+            let x = incl[i];
+            addx(incl[i].attributes.src.value,function(incl){
+                x.insertAdjacentHTML("afterend", incl), x.remove()
+            })
+        }
+    });
+</script>
+<script type="text/JavaScript">
+    function showhide(id) {
+        $('#'+id+'_block').slideToggle(150);
+    }
+</script>
+</head>
+
+<!-- top of page content -->
+<!--?php include_once("heading.php");?-->
+<include src="heading.html"></include>
+
+<div class="content">
+    
+    <h2 class="page_title">Students</h3>
+
+    <hr class="hr_sep">
+    
+    <h3>To Interested Students</h3>
+
+    <!--hr class="hr_sep"-->
+
+    <h4 id="to_future_phd" onclick="showhide(this.id)"><a>Prospective PhD Students</a></h3>
+    <div id="to_future_phd_block" style="display:none;">
+        <p style="margin-bottom: 5px !important">I am actively looking for self-motivated PhD students willing to work in any area related to my <a href="index.html#title_research">research</a>. If you are interested:</p>
+        <ul>
+            <li>Please send your CV, transcripts, and GRE/TOEFL scores (if applicable) to <a href="mailto:ryu5@ncsu.edu">ryu5@ncsu.edu</a>.</li>
+            <li>In your email, feel free to use <span class="pub_me">up to 2 sentences</span> to briefly describe the type / area of research you want to conduct as a PhD student.
+            </li>
+        </ul>
+        <p><strong>Note: please start your email's subject line with "[Future-PhD] " (without quotes) to ensure proper delivery of the email.</strong>
+        </p>
+    </div>
+
+
+
+    <!--hr class="hr_sep"-->
+
+
+
+    <h4 id="to_current_other" onclick="showhide(this.id)"><a>Current NCSU Graduate and Undergraduate Students</a></h3>
+    <div id="to_current_other_block" style="display:none;">
+        <p style="margin-bottom: 5px !important">If you are interested in working with me:</p>
+        <ul>
+            <li>Please send me an email with some details: your program (Undergrad/MS/PhD) and year, current research/research interests, CV, and transcripts.</li>
+            <li>If you have taken or are taking one of my classes, please also indicate that, and attach your grade of the course if available.</li>
+            <li>We may set up a meeting to discuss if our interests align, what course you should take, and the availability of a research position, if we both have time and are interested.</li>
+        </ul>
+        <p><strong>Note: please start your email's subject line with "[Current-&lt;Program&gt;] " (without quotes, substitute &lt;Program&gt; with one of PhD/MS/U) to ensure proper delivery of the email.</strong>
+        </p>
+    </div>
+
+
+
+    <!--hr class="hr_sep"-->
+
+
+
+    <h4 id="to_future_other" onclick="showhide(this.id)"><a>Prospective Non-PhD Students</a></h3>
+    <div id="to_future_other_block" style="display:none;">
+        <p style="margin-bottom: 5px !important">We may discuss about research opportunities after you become a <i>current</i> student, i.e., when you are admitted and enrolled in a program.</p>
+    </div>
+
+
+
+
+
+
+
+    <!-- PhD -->
+    <hr class="hr_sep" />
+    
+    <h3>PhD Students</h3>
+
+    <div class="stu_block">
+        <img class='stu_pic' src="images/pic-zhou.jpg" width="150" height="187.5" alt="Profile Picture"/>
+        <div class="stu_txt">
+            <h4><b>Fangtong Zhou</b></h4>
+            <p>Ph.D., Fall 2020 - Present</p>
+            <p>M.S., Texas A&M University</p>
+            <p>B.S., Harbin Institute of Technology</p>
+        </div>
+    </div>
+
+    <div class="stu_block">
+        <img class='stu_pic' src="images/pic-wang.jpg" width="150" height="187.5" alt="Profile Picture"/>
+        <div class="stu_txt">
+            <h4><b><a href="https://sites.google.com/ncsu.edu/xiaojianwang">Xiaojian Wang</a></b></h4>
+            <p>Ph.D., Fall 2021 - Present</p>
+            <p>M.S., Taiyuan University of Technology & University of West Florida</p>
+            <p>B.S., Taiyuan University of Technology</p>
+        </div>
+    </div>
+
+    <!--div class="stu_block">
+        <img class='stu_pic' src="images/pic-tabarsi.jpg" width="150" height="187.5" alt="Profile Picture"/>
+        <div class="stu_txt">
+            <h4><b>Benyamin T. Tabarsi</b></h4>
+            <p>Ph.D., Fall 2021 - Present</p>
+            <p>M.S., Azad University, Science and Research Branch, Tehran</p>
+            <p>B.S., University of Mazandaran - Babolsar</p>
+        </div>
+    </div-->
+
+    <div class="stu_block">
+        <img class='stu_pic' src="images/pic-gu.jpg" width="150" height="187.5" alt="Profile Picture"/>
+        <div class="stu_txt">
+            <h4><b><a href="https://gghhhyy.github.io/">Huayue Gu</a></b></h4>
+            <p>Ph.D., Fall 2021 - Present</p>
+            <p>M.S., University of California, Riverside</p>
+            <p>B.S., Nanjing University of Posts And Telecommunications</p>
+        </div>
+    </div>
+
+    <div class="stu_block">
+        <img class='stu_pic' src="images/pic-li.jpg" width="150" height="187.5" alt="Profile Picture"/>
+        <div class="stu_txt">
+            <h4><b><a href="https://lizhouyu.github.io/">Zhouyu Li</a></b></h4>
+            <p>Ph.D., Fall 2021 - Present (co-advising with Dr. Anupam Das)</p>
+            <p>M.S., Georgia Institute of Technology</p>
+            <p>B.S., Central South University</p>
+        </div>
+    </div>
+    
+
+
+
+
+    <!-- MS -->
+    <hr class="hr_sep" />
+
+    <h3>Master's Students</h3>
+    
+    <p><b>Ramya Sai Mullapudi</b> (MCS, Summer 2021 - Summer 2022)<span>&nbsp;&nbsp; |&nbsp;&nbsp; <b>Initial job:</b> Meta</span></p>
+    <p><b>Laxmi Aishwarya Thela</b> (MCS, Summer 2021 - Spring 2022)<span>&nbsp;&nbsp; |&nbsp;&nbsp; <b>Initial job:</b> Microsoft</span></p>
+    
+
+
+
+
+    <!-- Undergraduate -->
+    <hr class="hr_sep" />
+
+    <h3>Undergraduate Students</h3>
+    
+    <p><b>Jin Choi</b> (UG @ MAE, Mentor @ NCSSM Mentorship Program, Fall 2021 - Spring 2022)<span>&nbsp;&nbsp; |&nbsp;&nbsp; <b>Graduate program:</b> NYU MS in Data Science</span></p>
+    <p><b>Mari Kilgus</b> (UG @ CSC, Mentor @ NCSSM Mentorship Program, Fall 2021 - Spring 2022)</p>
+    
+
+
+
+
+    <!-- HS -->
+    <!--hr class="hr_sep" />
+
+    <h3>High School Students</h3-->
+    
+
+
+
+
+    <!-- Former MS -->
+    <hr class="hr_sep" />
+
+    <h3>Former Master's Students</h3>
+    
+    <p><b>Ayushi Rajendra Kumar</b> (MSCS, Fall 2020)<span>&nbsp;&nbsp; |&nbsp;&nbsp; <b>Initial job:</b> Nimble Storage - HPE</span></p>
+    <p><b>Vibhav Nandavaram Abbai Srivaths</b> (MCS, Fall 2020)<!--span>&nbsp;&nbsp; |&nbsp;&nbsp; <b>Initial job:</b> </span--></p>
+    <p><b>Prithvi Vijaybhai Patel</b> (MCS, Spring 2021)<!--span>&nbsp;&nbsp; |&nbsp;&nbsp; <b>Initial job:</b> </span--> </p>
+    <p><b>Pawandeep Mendiratta</b> (MCS, Spring 2021)<!--span>&nbsp;&nbsp; |&nbsp;&nbsp; <b>Initial job:</b> </span--></p>
+    
+
+
+
+
+    <!-- Former UG -->
+    <hr class="hr_sep" />
+
+    <h3>Former Undergraduate Students</h3>
+    
+    <p><b>Szu-Yu (Sabrina) Lo</b> (BS, NCSU COE REU, Fall 2019 - Summer 2021)<span>&nbsp;&nbsp; |&nbsp;&nbsp; <b>Initial job:</b> Twillo</span></p>
+    <p><b>Neal Patel</b> (BS, Mentor @ NCSSM Mentorship Program, Fall 2020)<!--span>&nbsp;&nbsp; |&nbsp;&nbsp; <b>Initial job:</b> Twillo</span--></p>
+    <p><b>Simon Griggs</b> (BS, Mentor @ NCSSM Mentorship Program, Spring 2021)<!--span>&nbsp;&nbsp; |&nbsp;&nbsp; <b>Initial job:</b> Twillo</span--></p>
+    
+
+
+
+
+    <!-- Former HS -->
+    <hr class="hr_sep" />
+
+    <h3>Former High School Students</h3>
+    
+    <p><b>Jonathan Jacob</b> (NCSSM, Mentorship Program, Fall 2020 - Spring 2021)</p>
+    <p><b>Kiki Wang</b> (NCSSM, Mentorship Program, Fall 2020 - Spring 2021)</p>    
+    <p><b>Amina Abdulsalam</b> (NCSSM, Mentorship Program, Fall 2021 - Spring 2021)</p>
+
+    
+</div><!-- end content -->
+
+
+
+<div id="clearfooter"></div>
+<!-- end of wrapper -->
+
+<!-- footer -->
+<!--?php include_once("footer.php");?-->
+<include src="footer.html"></include>
+
+</body>
+</html>

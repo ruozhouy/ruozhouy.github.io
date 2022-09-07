@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Ruozhou Yu @ NCSU</title>
+<!-- News JS function -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+<script type="text/JavaScript">
+    document.addEventListener("DOMContentLoaded",function(){
+        function addx(incl, idx){
+            fetch(incl).then(incl=>incl.text()).then(incl=>idx(incl))
+        }
+        let incl = document.getElementsByTagName("include");
+        for(var i = 0; i < incl.length; i++){
+            let x = incl[i];
+            addx(incl[i].attributes.src.value,function(incl){
+                x.insertAdjacentHTML("afterend", incl), x.remove()
+            })
+        }
+    });
+</script>
+</head>
+
+<!-- top of page content -->
+<!--?php include_once("heading.php");?-->
+<include src="heading.html"></include>
+
+ <div class="content">
+    
+    <h2 class="page_title">Current Research Projects</h2>
+	
+    
+    <!-- Add RESEARCH Description Here -->
+    
+   <!--  <p>[In Construction] I'm trying to find time to write about my general research vision, methods and interests. Before that, please refer to the About Me page for a brief description of my research.</p> -->
+
+
+
+
+
+    
+    <div class="r_cur_projs">
+        <table>
+
+
+
+
+          <!---------------------------------------------------------------------------->
+          <!-- Project description -->
+          <tr><td colspan="2">
+            <hr />
+            <div class="subtitle">Application-Network Co-Design for Edge Resource Provisioning 
+              <span class="proj_page">[<a href="project_wolfpack.php">Project Page</a>]</span>
+            </div>
+          </td></tr>
+          <tr>
+            <td><img src="images/project_wolfpack.png" class="r_cur_projs_image" /></td>
+            <td class="r_cur_projs_text">
+              Modern distributed computing applications have extremely complex structures. Examples include microservice-based applications such as Twitter, Netflix, Uber, and IoT, which can consist of thousands of microservices, loosely coupled through API calls. Such structural complexity poses significant challenges when these applications are looking to leverage edge computing, our next-gen computing paradigm, which provides low-latency and high-throughput computing proximal to end users. This project addresses the performance issue of large-scale distributed applications by employing an application-network co-design approach: <i>simultaneously configuring computing and networking resources for end-to-end performance guarantee</i>. Two developments will result from this project: the WolfPack, a theoretical framework for app-network co-design optimization; and the WolfBench, a systematic benchmark for app-network co-designed applications in realistic edge computing environments.
+              <br />
+              <br />
+              This project is supported by NSF CAREER Award <a href="https://nsf.gov/awardsearch/showAward?AWD_ID=2045539">#2045539</a>.
+            </td>
+          </tr>
+
+
+
+          
+
+          <!---------------------------------------------------------------------------->
+          <!-- Project description -->
+          <tr><td colspan="2">
+            <hr />
+            <div class="subtitle">Robust SLAs for Mobile Edge Computing Applications 
+              <span class="proj_page">[<a href="project_robust_sla.php">Project Page</a>]</span>
+            </div>
+          </td></tr>
+          <tr>
+            <td><img src="images/project_robust_sla.png" class="r_cur_projs_image" /></td>
+            <td class="r_cur_projs_text">
+              Mobile edge computing has emerged to address the long latency, low throughput, and unpredictability of cloud computing for serving modern mobile applications. Nevertheless, the lack of end-to-end performance guarantee in the form of service-level agreements (SLAs) can lead to performance degradation of critical applications during unexpected system dynamics, rendering these applications incompetent or unsafe to use. This project seeks to develop mathematical and systematic tools for edge providers to quantify and control, the risk associated with providing end-to-end SLAs for mobile applications. By designing multi-dimensional resource planning and orchestration algorithms that bound or minimize the risk associated with edge SLAs, this project aims to enable and enhance life-changing edge applications such as autonomous driving and mobile vision, promote investment and expedite development in mobile edge computing, and broaden awareness of risk management from a system perspective.
+              <br />
+              <br />
+              This project is supported by NSF Award <a href="https://nsf.gov/awardsearch/showAward?AWD_ID=2007391">#2007391</a>.
+            </td>
+          </tr>
+
+
+
+
+          <!---------------------------------------------------------------------------->
+          <!-- Project description -->
+          <tr><td colspan="2">
+            <hr />
+            <div class="subtitle">Economics and Privacy of Blockchain Payment Channel Networks 
+              <!--span class="proj_page">[<a href="">Project Page</a>]</span-->
+            </div>
+          </td></tr>
+          <tr>
+            <td><img src="images/project_pcn.png" class="r_cur_projs_image" /></td>
+            <td class="r_cur_projs_text">
+              The blockchain technology has enabled the prosperity of a decentralized economy around cryptocurrencies, notably the Bitcoin. Nevertheless, making daily payments through cryptocurrencies is still just a fancy concept due to the unbearably long settlement time, low throughput and high transaction fees of using the blockchain. Payment channel networks (PCNs) such as the Bitcoin Lightning network are off-the-chain networks construsted by local peer-to-peer channels that are cryptographically protected by the blockchain. With only local consensus involved in most transactions, PCNs are promising in achieving instant payment settlement, very high throughput, and low transaction fees. This project studies the economics and privacy of payment channel networks from a networking perspective, with the goal of developing scalable and usable next-gen financial systems with security.
+            </td>
+          </tr>
+
+
+
+        </table>
+    </div>
+    
+    </div><!-- end content -->
+</div><!-- end mid -->
+</div><!-- end main -->
+
+
+<div id="clearfooter"></div>
+<!-- end of wrapper -->
+
+
+<!-- footer -->
+<!--?php include_once("footer.php");?-->
+<include src="footer.html"></include>
+
+</body>
+</html>

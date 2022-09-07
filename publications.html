@@ -1,0 +1,413 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Ruozhou Yu @ NCSU</title>
+<!-- News JS function -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+<script type="text/JavaScript">
+    document.addEventListener("DOMContentLoaded",function(){
+        function addx(incl, idx){
+            fetch(incl).then(incl=>incl.text()).then(incl=>idx(incl))
+        }
+        let incl = document.getElementsByTagName("include");
+        for(var i = 0; i < incl.length; i++){
+            let x = incl[i];
+            addx(incl[i].attributes.src.value,function(incl){
+                x.insertAdjacentHTML("afterend", incl), x.remove()
+            })
+        }
+    });
+</script>
+</head>
+
+<!-- top of page content -->
+<!--?php include_once("heading.php");?-->
+<include src="heading.html"></include>
+
+
+ <div class="content">
+
+        <p>&copy; ACM/IEEE/IEICE. Personal use of this material is permitted. Permission from the copyright holder 
+            must be obtained for all other uses, including reprinting/republishing this material for advertising 
+            or promotional purposes, collecting new collected works for resale or redistribution to servers or lists, 
+            or reuse of any copyrighted component of this work in other works.</p>
+
+        <hr />
+
+        <!--p>_* indicates students under my supervision at the time of paper submission.</p-->
+	
+        <section id="publications" class="wrapper style4 fade-up">
+            <div class="inner">
+                <h2 class="secion_headline page_title">Conference Publications</h2>
+                    <!--p class="top_href" align="right"><a href="#about" class="scrolly">[Top]</a></p-->
+                <ul>
+
+                    <li><span class="pub_title">FedAegis: Edge-Based Byzantine-Robust Federated Learning for Heterogeneous Data</span>
+                        [<a href="docs/gc-22-paper.pdf" class="pub_pdf">PDF</a>]
+                        <br />
+                        <span class="pub_author">
+                            <span class="pub_stu">Fangtong Zhou</span>*, 
+                            <span class="pub_me">Ruozhou Yu</span>, 
+                            <span class="pub_stu">Zhouyu Li</span>*, 
+                            <span class="pub_stu">Huayue Gu</span>*, 
+                            <span class="pub_stu">Xiaojian Wang</span>*
+                        </span>
+                        <br />
+                        <span class="pub_pubtxt">Accepted by <span class="pub_pub">IEEE Global Communications Conference (GLOBECOM)</span>, 2022.</span>
+                    </li>
+
+                    <li><span class="pub_title">Why Riding the Lightning? Equilibrium Analysis for Payment Hub Pricing</span>
+                        [<a href="docs/icc-22-paper.pdf" class="pub_pdf">PDF</a>] 
+                        [<a href="docs/icc-22-slides.pdf" class="pub_pdf">Slides</a>] 
+                        <br />
+                        <span class="pub_author">
+                            <span class="pub_stu">Xiaojian Wang</span>*, 
+                            <span class="pub_stu">Huayue Gu</span>*, 
+                            <span class="pub_stu">Zhouyu Li</span>*, 
+                            <span class="pub_stu">Fangtong Zhou</span>*, 
+                            <span class="pub_me">Ruozhou Yu</span>, 
+                            Dejun Yang
+                        </span>
+                        <br />
+                        <span class="pub_pubtxt">In <span class="pub_pub">IEEE International Conference on Communications (ICC)</span>, 2022.</span>
+                    </li>
+
+                    <li><span class="pub_title">Edge-Assisted Collaborative Perception in Autonomous Driving: A Reflection on Communication Design</span>
+                        [<a href="docs/sec-wkshps-21-paper.pdf" class="pub_pdf">PDF</a>] 
+                        [<a href="docs/sec-wkshps-21-slides.pdf" class="pub_pdf">Slides</a>] 
+                        <br />
+                        <span class="pub_author"><span class="pub_me">Ruozhou Yu</span>, Dejun Yang, Hao Zhang</span>
+                        <br />
+                        <span class="pub_pubtxt">In <span class="pub_pub">ACM/IEEE Symposium on Edge Computing (SEC) Workshops</span>, 2021.</span>
+                    </li>
+
+                    <li><span class="pub_title">Data-Driven Edge Resource Provisioning for Inter-Dependent Microservices with Dynamic Load</span>
+                        [<a href="docs/gc-21-paper.pdf" class="pub_pdf">PDF</a>] 
+                        [<a href="docs/gc-21-slides.pdf" class="pub_pdf">Slides</a>] 
+                        <br />
+                        <span class="pub_author"><span class="pub_me">Ruozhou Yu</span>, <span class="pub_stu">Szu-Yu Lo</span>*, <span class="pub_stu">Fangtong Zhou</span>*, Guoliang Xue</span>
+                        <br />
+                        <span class="pub_pubtxt">In <span class="pub_pub">IEEE Global Communications Conference (GLOBECOM)</span>, 2021.</span>
+                    </li>
+
+                    <li><span class="pub_title">Counter-Collusion Smart Contracts for Watchtowers in Payment Channel Networks</span> 
+                        <br />
+                        <span class="pub_author">Yuhui Zhang, Dejun Yang, Guoliang Xue, <span class="pub_me">Ruozhou Yu</span></span>
+                        <br />
+                        <span class="pub_pubtxt">In <span class="pub_pub">IEEE International Conference on Computer Communications (<b class="red_highlight">INFOCOM</b>)</span>, 2021.</span>
+                    </li>
+
+                    <li><span class="pub_title">A Blockchain-based Vehicle-trust Management Framework Under a Crowdsourcing Environment</span> 
+                        <br />
+                        <span class="pub_author">Dawei Wang, Xiao Chen, Haiqin Wu, <span class="pub_me">Ruozhou Yu</span> and Yishi Zhao</span>
+                        <br />
+                        <span class="pub_pubtxt">In <span class="pub_pub">IEEE 3rd International Workshop on Blockchain Systems and Applications (BlockchainSys), 2020.</span>
+                    </li>
+
+                    <li><span class="pub_title">Robust Resource Provisioning in Time-Varying Edge Networks</span> 
+                        [<a href="docs/mobihoc-20-paper.pdf" class="pub_pdf">PDF</a>] 
+                        [<a href="docs/mobihoc-20-slides.pdf" class="pub_pdf">Slides</a>] 
+                        <br />
+                        <span class="pub_author"><span class="pub_me">Ruozhou Yu</span>, Guoliang Xue, Yinxin Wan, Jian Tang, Dejun Yang, Yusheng Ji</span>
+                        <br />
+                        <span class="pub_pubtxt">In <span class="pub_pub">ACM International Symposium on Theory, Algorithmic Foundations, and Protocol Design for Mobile Networks and Mobile Computing (<b class="red_highlight">Mobihoc</b>)</span>, 2020.</span>
+                    </li>
+
+                    <li><span class="pub_title">EARS: Enabling Private Feedback Updates in Anonymous Reputation Systems</span> 
+                        <br />
+                        <span class="pub_author">Vishnu Teja Kilari, <span class="pub_me">Ruozhou Yu</span>, Satyajayant Misra, Guoliang Xue</span>
+                        <br />
+                        <span class="pub_pubtxt">In <span class="pub_pub">IEEE Conference on Communications and Network Security (<b class="red_highlight">CNS</b>)</span>, 2020.</span>
+                    </li>
+
+                    <li><span class="pub_title">P4PCN: Privacy-Preserving Path Probing for Payment Channel Networks</span>
+                        [<a href="docs/gc-19-paper.pdf" class="pub_pdf">PDF</a>] 
+                        [<a href="docs/gc-19-slides.pdf" class="pub_pdf">Slides</a>] 
+                        <br />
+                        <span class="pub_author"><span class="pub_me">Ruozhou Yu</span>, Yinxin Wan, Vishnu Teja Kilari, Guoliang Xue, Jian Tang, Dejun Yang</span>
+                        <br />
+                        <span class="pub_pubtxt">In <span class="pub_pub">IEEE Global Communications Conference (GLOBECOM)</span>, 2019.</span>
+                    </li>
+
+                    <li><span class="pub_title">Load Balancing for Interdependent IoT Microservices</span>
+                        [<a href="docs/infocom-19-paper.pdf" class="pub_pdf">PDF</a>] 
+                        [<a href="docs/infocom-19-slides.pdf" class="pub_slides">Slides</a>] 
+                        <br />
+                        <span class="pub_author"><span class="pub_me">Ruozhou Yu</span>, Vishnu Teja Kilari, Guoliang Xue, Jian Tang</span>
+                        <br />
+                        <span class="pub_pubtxt">In <span class="pub_pub">IEEE International Conference on Computer Communications (<b class="red_highlight">INFOCOM</b>)</span>, 2019.</span>
+                    </li>
+
+                    <li><span class="pub_title">CoinExpress: A Fast Payment Routing Mechanism in Blockchain-based Payment Channel Networks</span>
+                        [<a href="docs/icccn-18-paper.pdf" class="pub_pdf">PDF</a>] 
+                        [<a href="docs/icccn-18-slides.pdf" class="pub_slides">Ext. Slides</a>] 
+                        <br />
+                        <span class="pub_author"><span class="pub_me">Ruozhou Yu</span>, Guoliang Xue, Vishnu Teja Kilari, Dejun Yang, Jian Tang</span>
+                        <br />
+                        <span class="pub_pubtxt">In <span class="pub_pub">IEEE International Conference on Computer Communications and Networks (ICCCN)</span>, 2018.</span>
+                    </li>
+
+                    <li><span class="pub_title">Deploying Robust Security in Internet of Things</span>
+                        [<a href="docs/cns-18-paper.pdf" class="pub_pdf">PDF</a>] 
+                        [<a href="docs/cns-18-slides.pdf" class="pub_slides">Slides</a>] 
+                        <br />
+                        <span class="pub_author"><span class="pub_me">Ruozhou Yu</span>, Guoliang Xue, Vishnu Teja Kilari, Xiang Zhang</span>
+                        <br />
+                        <span class="pub_pubtxt">In <span class="pub_pub">IEEE Conference on Communications and Network Security (<b class="red_highlight">CNS</b>)</span>, 2018.</span>
+                    </li>
+
+                    <li><span class="pub_title">Application Provisioning in Fog Computing-enabled Internet-of-Things: A Network Perspective</span>
+                        [<a href="docs/infocom-18-paper.pdf" class="pub_pdf">PDF</a>] 
+                        [<a href="docs/infocom-18-slides.pdf" class="pub_slides">Slides</a>] 
+                        <br />
+                        <span class="pub_author"><span class="pub_me">Ruozhou Yu</span>, Guoliang Xue, Xiang Zhang</span>
+                        <br />
+                        <span class="pub_pubtxt">In <span class="pub_pub">IEEE International Conference on Computer Communications (<b class="red_highlight">INFOCOM</b>)</span>, 2018.</span>
+                        <span class="pub_pubtxt">[<span class="red_highlight">Best-in-Session Presentation</span>]</span>
+                    </li>
+
+                    <li><span class="pub_title">Transmitting and Sharing: a Truthful Double Auction for Cognitive Radio Networks</span>
+                        <br />
+                        <span class="pub_author">Xiang Zhang, Dejun Yang, Guoliang Xue, <span class="pub_me">Ruozhou Yu</span>, Jian Tang</span>
+                        <br />
+                        <span class="pub_pubtxt">In <span class="pub_pub">IEEE International Conference on Communications (ICC)</span>, 2018.</span>
+                    </li>
+
+                    <li><span class="pub_title">Survivable and Bandwidth-Guaranteed Embedding of Virtual Clusters in Cloud Data Centers</span>
+                        [<a href="docs/infocom-17-paper.pdf" class="pub_pdf">PDF</a>] 
+                        [<a href="docs/infocom-17-paper-extended.pdf" class="pub_pdf">Ext. PDF</a>] 
+                        [<a href="docs/infocom-17-slides.pdf" class="pub_slides">Slides</a>] 
+                        <br />
+                        <span class="pub_author"><span class="pub_me">Ruozhou Yu</span>, Guoliang Xue, Xiang Zhang, Dan Li</span>
+                        <br />
+                        <span class="pub_pubtxt">In <span class="pub_pub">IEEE International Conference on Computer Communications (<b class="red_highlight">INFOCOM</b>)</span>, 2017.</span>
+                    </li>
+
+                    <li><span class="pub_title">An Approach to QoS-based Task Distribution in Edge Computing Networks for IoT Applications</span>
+                        <br />
+                        <span class="pub_author">Yaozhong Song, Stephen S. Yau, <span class="pub_me">Ruozhou Yu</span>, Xiang Zhang, Guoliang Xue</span>
+                        <br />
+                        <span class="pub_pubtxt">In <span class="pub_pub">IEEE International Conference on Edge Computing (EDGE)</span>, 2017.</span>
+                        <span class="pub_pubtxt">[<span class="red_highlight">Best Student Paper</span>]</span>
+                    </li>
+
+                    <li><span class="pub_title">Robust Incentive Tree Design for Mobile Crowdsensing</span>
+                        <br />
+                        <span class="pub_author">Xiang Zhang, Guoliang Xue, <span class="pub_me">Ruozhou Yu</span>, Dejun Yang, Jian Tang</span>
+                        <br />
+                        <span class="pub_pubtxt">In <span class="pub_pub">IEEE International Conference on Distributed Computing Systems (<b class="red_highlight">ICDCS</b>)</span>, 2017.</span>
+                    </li>
+
+                    <li><span class="pub_title">Non-preemptive Coflow Scheduling and Routing</span>
+                        [<a href="docs/gc-16-paper.pdf" class="pub_pdf">PDF</a>] 
+                        [<a href="docs/gc-16-slides.pdf" class="pub_slides">Slides</a>] 
+                        <br />
+                        <span class="pub_author"><span class="pub_me">Ruozhou Yu</span>, Guoliang Xue, Xiang Zhang, Jian Tang</span>
+                        <br />
+                        <span class="pub_pubtxt">In <span class="pub_pub">IEEE Global Communications Conference (GLOBECOM)</span>, 2016.</span>
+                    </li>
+                    
+                    <li><span class="pub_title">QoS Correlation-Aware Service Composition for Unified Network-Cloud Service Provisioning</span>
+                        <br />
+                        <span class="pub_author">Jun Huang, Shihao Li, Qiang Duan, <span class="pub_me">Ruozhou Yu</span>, Shui Yu</span>
+                        <br />
+                        <span class="pub_pubtxt">In <span class="pub_pub">IEEE Global Communications Conference (GLOBECOM)</span>, 2016.</span>
+                    </li>
+                    
+                    <li><span class="pub_title">Enhancing Software-Defined RAN with Collaborative Caching and Scalable Video Coding</span>
+                        [<a href="docs/icc-16-paper.pdf" class="pub_pdf">PDF</a>] 
+                        [<a href="docs/icc-16-slides.pdf" class="pub_slides">Slides</a>] 
+                        [<a href="docs/icc-16-poster.pdf" class="pub_poster">Poster</a>] 
+                        <br />
+                        <span class="pub_author"><span class="pub_me">Ruozhou Yu</span>, Shuang Qin, Mehdi Bennis, Xianfu Chen, Gang Feng, Zhu Han, Guoliang Xue</span>
+                        <br />
+                        <span class="pub_pubtxt">In <span class="pub_pub">IEEE International Conference on Communications (ICC)</span>, 2016.</span>
+                    </li>
+                    
+                    <li><span class="pub_title">Towards Min-Cost Virtual Infrastructure Embedding</span>
+                        [<a href="docs/gc-15-paper.pdf" class="pub_pdf">PDF</a>] 
+                        [<a href="docs/gc-15-slides.pdf" class="pub_slides">Slides</a>] 
+                        <br />
+                        <span class="pub_author"><span class="pub_me">Ruozhou Yu</span>, Guoliang Xue, Xiang Zhang</span>
+                        <br />
+                        <span class="pub_pubtxt">In <span class="pub_pub">IEEE Global Communications Conference (GLOBECOM)</span>, 2015.</span>
+                    </li>
+                    
+                    <li><span class="pub_title">A Sybil-proof and Time-sensitive Incentive Tree Mechanism for Crowdsourcing</span>
+                        [<a href="docs/gc-15-slides-xiang.pdf" class="pub_slides">Slides</a>] 
+                        <br />
+                        <span class="pub_author">Xiang Zhang, Guoliang Xue, Dejun Yang, <span class="pub_me">Ruozhou Yu</span></span>
+                        <br />
+                        <span class="pub_pubtxt">In <span class="pub_pub">IEEE Global Communications Conference (GLOBECOM)</span>, 2015.</span>
+                    </li>
+                    
+                    <li><span class="pub_title">TSA: A Framework of Truthful Spectrum Auctions under the Physical Interference Model</span>
+                        <br />
+                        <span class="pub_author">Xiang Zhang, Guoliang Xue, Dejun Yang, <span class="pub_me">Ruozhou Yu</span>, Xiaoyan Huang</span>
+                        <br />
+                        <span class="pub_pubtxt">In <span class="pub_pub">IEEE International Conference on Communications (ICC)</span>, 2015.</span>
+                    </li>
+                    
+                    <li><span class="pub_title">Truthful Incentive Mechanisms for Crowdsourcing</span>
+                        <br />
+                        <span class="pub_author">Xiang Zhang, Guoliang Xue, <span class="pub_me">Ruozhou Yu</span>, Dejun Yang, Jian Tang</span>
+                        <br />
+                        <span class="pub_pubtxt">In <span class="pub_pub">IEEE Conference on Computer Communications (<b class="red_highlight">INFOCOM</b>)</span>, 2015.</span>
+                    </li>
+                    
+                    <li><span class="pub_title">You Better Be Honest: Discouraging Free-Riding and False-Reporting in Mobile Crowdsourcing</span>
+                        <br />
+                        <span class="pub_author">Xiang Zhang, Guoliang Xue, <span class="pub_me">Ruozhou Yu</span>, Dejun Yang, Jian Tang</span>
+                        <br />
+                        <span class="pub_pubtxt">In <span class="pub_pub">IEEE Global Communications Conference (GLOBECOM)</span>, 2014.</span>
+                    </li>
+                    
+                    <li><span class="pub_title">QoS-aware Service Selection in Virtualization-based Cloud Computing</span>
+                        <br />
+                        <span class="pub_author"><span class="pub_me">Ruozhou Yu</span>, Xudong Yang, Jun Huang, Qiang Duan, Yan Ma, Yoshiaki Tanaka</span>
+                        <br />
+                        <span class="pub_pubtxt">In <span class="pub_pub">IEEE Asia-Pacific Network Operations and Management Symposium (APNOMS)</span>, 2012.</span>
+                    </li>
+                </ul>
+
+
+
+
+
+
+
+                <h2 class="secion_headline page_title">Journal Publications</h2>
+                    <!--p class="top_href" align="right"><a href="#about" class="scrolly">[Top]</a></p-->
+                <ul>
+
+                    <li><span class="pub_title">On Topology Design for the Quantum Internet</span>
+                        <!--[<a href="docs/commag-18-paper.pdf" class="pub_pdf">PDF</a>]-->
+                        <br />
+                        <span class="pub_author"><span class="pub_me">Ruozhou Yu</span>, Rudra Dutta, Jianqing Liu</span>
+                        <br />
+                        <span class="pub_pubtxt">Accepted by <span class="pub_pub">IEEE Network Magazine</span>, 2022.</span>
+                    </li>
+
+                    <li><span class="pub_title">TAFS: A Truthful Auction for IoT Application Offloading in Fog Computing Networks</span>
+                        <br />
+                        <span class="pub_author">Lijun Sun, Guoliang Xue, <span class="pub_me">Ruozhou Yu</span></span>
+                        <br />
+                        <span class="pub_pubtxt">Accepted by <span class="pub_pub">IEEE Internet of Things Journal (<b class="red_highlight">IoTJ</b>)</span>, 2022.</span>
+                    </li>
+
+                    <li><span class="pub_title">Robust Revocable Anonymous Authentication for Vehicle to Grid Communications</span>
+                        <br />
+                        <span class="pub_author">Vishnu T. Kilari, <span class="pub_me">Ruozhou Yu</span>, Satyajayant Misra, Guoliang Xue</span>
+                        <br />
+                        <span class="pub_pubtxt"><span class="pub_pub">IEEE Transactions on Intelligent Transportation Systems (<b class="red_highlight">T-ITS</b>)</span>, vol. 21, no. 11, pp. 4845-4857, 2020.</span>
+                    </li>
+
+                    <li><span class="pub_title">Provisioning QoS-aware and Robust Applications in Internet-of-Things: A Network Perspective</span>
+                        [<a href="docs/ton-19-paper.pdf" class="pub_pdf">PDF</a>] 
+                        <br />
+                        <span class="pub_author"><span class="pub_me">Ruozhou Yu</span>, Guoliang Xue, Xiang Zhang</span>
+                        <br />
+                        <span class="pub_pubtxt"><span class="pub_pub">IEEE/ACM Transactions on Networking (<b class="red_highlight">ToN</b>)</span>, vol. 27, no. 5, pp. 1931–1944, 2019.</span>
+                    </li>
+
+                    <li><span class="pub_title">The Fog-of-Things Paradigm: Road towards On-demand Internet-of-Things</span>
+                        [<a href="docs/commag-18-paper.pdf" class="pub_pdf">PDF</a>] 
+                        <br />
+                        <span class="pub_author"><span class="pub_me">Ruozhou Yu</span>, Guoliang Xue, Vishnu Teja Kilari, Xiang Zhang</span>
+                        <br />
+                        <span class="pub_pubtxt"><span class="pub_pub">IEEE Communications Magazine</span>, vol. 56, no. 9, pp. 48--54, 2018.</span>
+                    </li>
+
+                    <li><span class="pub_title">HSDRAN: Hierarchical Software-Defined Radio Access Network for Distributed Optimization</span>
+                        [<a href="docs/tvt-17-paper.pdf" class="pub_pdf">PDF</a>] 
+                        <br />
+                        <span class="pub_author"><span class="pub_me">Ruozhou Yu</span>, Guoliang Xue, Mehdi Bennis, Xianfu Chen, Zhu Han</span>
+                        <br />
+                        <span class="pub_pubtxt"><span class="pub_pub">IEEE Transactions on Vehicular Technology (<b class="red_highlight">TVT</b>)</span>, vol. 67, no. 9, pp. 8623-8636, 2018.</span>
+                    </li>
+
+                    <li><span class="pub_title">QoS-aware and Reliable Traffic Steering for Service Function Chaining in Mobile Networks</span>
+                        [<a href="docs/jsac-17-paper.pdf" class="pub_pdf">PDF</a>] 
+                        <br />
+                        <span class="pub_author"><span class="pub_me">Ruozhou Yu</span>, Guoliang Xue, Xiang Zhang</span>
+                        <br />
+                        <span class="pub_pubtxt"><span class="pub_pub">IEEE Journal on Selected Areas in Communications (<b class="red_highlight">JSAC</b>)</span>, vol. 35, no. 11, pp. 2522-2531, 2017.</span>
+                    </li>
+
+                    <li><span class="pub_title">The Critical Network Flow Problem: Migratability and Survivability</span>
+                        [<a href="docs/ton-17-paper.pdf" class="pub_pdf">PDF</a>] 
+                        <br />
+                        <span class="pub_author"><span class="pub_me">Ruozhou Yu</span>, Guoliang Xue, Xiang Zhang</span>
+                        <br />
+                        <span class="pub_pubtxt"><span class="pub_pub">IEEE/ACM Transactions on Networking (<b class="red_highlight">ToN</b>)</span>, vol. 25, no. 6, pp. 3545-3558, 2017.</span>
+                    </li>
+
+                    <li><span class="pub_title">Countermeasures Against False-Name Attacks on Truthful Incentive Mechanisms for Crowdsourcing</span>
+                        <br />
+                        <span class="pub_author">Xiang Zhang, Guoliang Xue, <span class="pub_me">Ruozhou Yu</span>, Dejun Yang, Jian Tang</span>
+                        <br />
+                        <span class="pub_pubtxt"><span class="pub_pub">IEEE Journal on Selected Areas in Communications (<b class="red_highlight">JSAC</b>)</span>, vol. 35, no. 2, pp. 478-485, 2017.</span>
+                    </li>
+                    
+                    <li><span class="pub_title">Joint Scheduling and Beamforming Coordination in Cloud Radio Access Networks with QoS Guarantees</span>
+                        <br />
+                        <span class="pub_author">Xiaoyan Huang, Guoliang Xue, <span class="pub_me">Ruozhou Yu</span>, Supeng Leng</span>
+                        <br />
+                        <span class="pub_pubtxt"><span class="pub_pub">IEEE Transactions on Vehicular Technology (<b class="red_highlight">TVT</b>)</span>, vol. 65, no. 7, pp. 5449-5460, 2016.</span>
+                    </li>
+                    
+                    <li><span class="pub_title">DCloud: Deadline-aware Resource Allocation for Cloud Computing Jobs</span>
+                        <br />
+                        <span class="pub_author">Dan Li, Congjie Chen, Junjie Guan, Ying Zhang, Jing Zhu, <span class="pub_me">Ruozhou Yu</span></span>
+                        <br />
+                        <span class="pub_pubtxt"><span class="pub_pub">IEEE Transactions on Parallel and Distributed Systems (<b class="red_highlight">TPDS</b>)</span>, vol. 27, no. 8, pp. 2248-2260, 2016.</span>
+                    </li>
+                    
+                    <li><span class="pub_title">Network Function Virtualization in the Multi-tenant Cloud</span>
+                        <!-- [<a href="#" class="pub_pdf">PDF</a>]  -->
+                        <br />
+                        <span class="pub_author"><span class="pub_me">Ruozhou Yu</span>, Guoliang Xue, Vishnu Teja Kilari, Xiang Zhang</span>
+                        <br />
+                        <span class="pub_pubtxt"><span class="pub_pub">IEEE Network Magazine</span>, vol. 29, no. 3, pp. 42-47, 2015.</span>
+                    </li>
+                    
+                    <li><span class="pub_title">Keep Your Promise: Mechanism Design Against Free-Riding and False-Reporting in Crowdsourcing</span>
+                        <br />
+                        <span class="pub_author">Xiang Zhang, Guoliang Xue, <span class="pub_me">Ruozhou Yu</span>, Dejun Yang, Jian Tang</span>
+                        <br />
+                        <span class="pub_pubtxt"><span class="pub_pub">IEEE Internet of Things Journal (<b class="red_highlight">IoTJ</b>)</span>, vol. 2, no. 6, pp. 562-572, 2015.</span>
+                    </li>
+                    
+                    <li><span class="pub_title">Modeling and Algorithms for QoS-aware Service Composition in Virtualization-based Cloud Computing</span>
+                        <br />
+                        <span class="pub_author">Jun Huang, Yanbin Liu, <span class="pub_me">Ruozhou Yu</span>, Qiang Duan, Yoshiaki Tanaka</span>
+                        <br />
+                        <span class="pub_pubtxt"><span class="pub_pub">IEICE Transactions on Communications</span>, vol. 96, no. 1, pp. 10-19, 2013.</span>
+                    </li>
+                </ul>
+            </div>
+        </section>
+
+
+
+    
+    </div><!-- end content -->
+</div><!-- end mid -->
+</div><!-- end main -->
+
+
+
+
+
+<div id="clearfooter"></div>
+<!-- end of wrapper -->
+
+
+<!-- footer -->
+<!--?php include_once("footer.php");?-->
+<include src="footer.html"></include>
+
+
+</body>
+</html>

@@ -1,0 +1,329 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Ruozhou Yu @ NCSU</title>
+<!-- News JS function -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+<script type="text/JavaScript">
+    document.addEventListener("DOMContentLoaded",function(){
+        function addx(incl, idx){
+            fetch(incl).then(incl=>incl.text()).then(incl=>idx(incl))
+        }
+        let incl = document.getElementsByTagName("include");
+        for(var i = 0; i < incl.length; i++){
+            let x = incl[i];
+            addx(incl[i].attributes.src.value,function(incl){
+                x.insertAdjacentHTML("afterend", incl), x.remove()
+            })
+        }
+    });
+</script>
+</head>
+
+<script type="text/JavaScript">
+// Function returns the product of a and b
+function toggleNews() {
+    const cnt_to_show = 5;
+    var news = document.getElementsByClassName("News")[0].getElementsByTagName("li");
+    var button = document.getElementById("news_showmore").getElementsByTagName("a")[0];
+    //var button1 = document.getElementById("news_showless").getElementsByTagName("a")[0];
+    var cnt = 0;
+    //console.log(news);
+    if (button.textContent === "[show more]") {
+        button.textContent = '[show less]';
+        for (var item = 0; item < news.length; item++) {
+            //console.log(item);
+            cnt++;
+            if (cnt > cnt_to_show) {
+                news[item].style.display = "";
+            }
+        }
+    } else if (button.textContent === "[show less]") {
+        button.textContent = '[show more]';
+        for (var item = 0; item < news.length; item++) {
+            //console.log(item);
+            cnt++;
+            if (cnt > cnt_to_show) {
+                news[item].style.display = "none";
+            }
+        }
+    }
+}
+</script>
+
+<!-- top of page content -->
+<!--?php include_once("heading.php");?-->
+<include src="heading.html"></include>
+
+ <div class="content">
+    
+    <h2 class="page_title">About Me</h2>
+    
+    
+    
+    <!-- - - - - Add Biographpy BELOW Here - - - - - -->
+
+
+    
+    <p style='margin-bottom:1em'>I am an Assistant Professor in the Computer Science Department and the Electrical and Computer Engineering Department (by courtesy) at NCSU. Before joining NCSU, I received my PhD in Computer Science from Arizona State University in 2019, supervised by <a href="https://www.public.asu.edu/~gxue1/">Dr. Guoliang Xue</a>. I received my BS in Computer Science from Beijing University of Posts and Telecommunications in 2013. I was also a Research Assistant Intern at Tsinghua University from 2012 to 2013, supervised by <a href="https://nasp.cs.tsinghua.edu.cn/lidan.html">Dr. Dan Li</a>.
+    </p>
+
+    <p style='margin-bottom:1em'><strong>I am actively looking for self-motivated PhD students to conduct research on Internet-of-Things, edge computing, network security, machine learning, and the blockchain!</strong> If you are interested in my research below, please see my <a href="students.php">Students</a> page for information on contacting me regarding research opportunities. 
+    </p>
+
+    <p> <a href="https://www.csc.ncsu.edu/people/ryu5">[CSC Directory]</a>&nbsp;
+        <a href="https://scholar.google.com/citations?user=WbFCWFsAAAAJ">[Google Scholar]</a>&nbsp;
+        <a href="https://dblp.uni-trier.de/pers/hd/y/Yu:Ruozhou">[DBLP]</a>&nbsp;
+        <a href="docs/cv.pdf">[CV (09/2021)]</a>&nbsp;
+        <a href="https://www.mathgenealogy.org/id.php?id=251219">[My Academic Heritage]</a>&nbsp;
+    </p>
+
+    <!--
+    <hr />
+    <p>
+        My <a href="https://en.wikipedia.org/wiki/Erd%C5%91s_number">Erdos Number</a> is <b>3</b>: I'm 2 hops away from <a href="https://en.wikipedia.org/wiki/Paul_Erd%C5%91s">Paul Erdos</a>!&nbsp;
+    </p>
+    <p>
+        <a href="https://www.genealogy.math.ndsu.nodak.edu/id.php?id=249950">[My Academic Heritage]</a> My academic ancestors include (but are not limited to)
+        <a href="https://en.wikipedia.org/wiki/Jacob_Bernoulli">Bernoulli, J.</a>, 
+        <a href="https://en.wikipedia.org/wiki/Leonhard_Euler">Euler, L.</a>, 
+        <a href="https://en.wikipedia.org/wiki/Joseph-Louis_Lagrange">Lagrange, J. L.</a>, 
+        <a href="https://en.wikipedia.org/wiki/Pierre-Simon_Laplace">Laplace, P. S.</a>, 
+        <a href="https://en.wikipedia.org/wiki/Sim%C3%A9on_Denis_Poisson">Poisson, S. D.,</a>
+        ...
+    </p>
+    -->
+
+    <hr />
+
+
+
+
+
+    <!-- - - - - Add News section BELOW Here - - - - - -->
+
+    <!--h2 class="page_title" id="title_news">News</h2-->
+
+
+
+
+    
+    <div class="News" onload="toggleNews()">
+        <h2 class="subtitle">News <span id="news_showmore" onclick="toggleNews()"><a>[show less]</a></span> <!--span id="news_showless" onclick="toggleNews()"><a>[show less]</a--></span></h2>
+        <ul>
+            
+            <li>[8/2022] Our paper on <i>quantum network topology design</i> was accepted by IEEE Network Magazine. Congratulations to all!
+            </li>
+            
+            <li>[8/2022] Our paper on <i>Byzantine-robust federated learning</i> was accepted by IEEE GLOBECOM 2022. Congratulations to Fangtong and all!
+            </li>
+            
+            <li>[5/2022] I am serving as a TPC member and the Web Co-Chair for IEEE INFOCOM 2023 to be held in New York area, USA.
+            </li>
+            
+            <li>[4/2022] <span style="color:red">We are recruiting <b>undergraduate students</b> for research</span> related to a funded NSF project. Please see <a href="https://people.engr.ncsu.edu/ryu5/project_wolfpack.php">Project Website</a> for details. Selected students can receive CSC 498/499 credit hours, and/or NSF REU funding if eligible. 
+            </li>
+            
+            <li>[4/2022] Congratulations to Jin Choi who will join the NYU MS in DS program after graduating from NC State!
+            </li>
+            
+            <li>[4/2022] Congratulations to Laxmi Aishwarya Thela for her full-time job offer from Microsoft, and to Ramya Sai Mullapudi for her full-time job offer from Meta!
+            </li>
+            
+            <li>[2/2022] I am serving as the General Vice Co-Chair for IEEE IPCCC 2022 to be held in Austin, Texas. 
+            </li>
+            
+            <li>[2/2022] I was elected as a Distinguished TPC Member for IEEE INFOCOM 2022. Thanks, peers!
+            </li>
+            
+            <li>[1/2022] Our paper on <i>pricing analysis for payment channel hubs</i> was accepted by IEEE ICC 2022. Congratulations to Xiaojian and all!
+            </li>
+            
+            <li>[1/2022] Our paper on <i>edge resource auction</i> was accepted by IEEE Internet-of-Things Journal. Congratulations to all!
+            </li>
+            
+            <li>[11/2021] I am serving as the TPC Co-Chair for PerAI-6G workshop, co-located with IEEE INFOCOM 2022.
+            </li>
+            
+            <li>[8/2021] Our paper on <i>robust microservice provisioning</i> was accepted by IEEE GLOBECOM 2021. Congratulations to all!
+            </li>
+
+            <li>[8/2021] I am serving as a TPC member for EAI MONAMI 2021 to be held online and in-person in Chiba, Japan.
+            </li>
+            
+            <li>[5/2021] I am serving as a TPC member and the Web Co-Chair for IEEE INFOCOM 2022 to be held in London, United Kingdom.
+            </li>
+            
+            <li>[3/2021] I am serving as a Guest Editor of IEEE OJ-CS Special Section on Emerging Techniques for Future Smart Cities after COVID-19. <!-- [<a href="https://www.computer.org/digital-library/journals/oj/call-for-papers-special-section-on-emerging-techniques-for-future-smart-cities-after-covid-19/">Link</a>]. The submission deadline is <b>June 30, 2021</b>. Please consider submitting your valuable work!  -->
+            </li>
+            
+            <li>[3/2021] I am honored to receive the <b>NSF CAREER Award</b> for research on <i>application-network edge resource provisioning</i>. Thanks to NSF!
+            </li>
+
+            <li>Our paper on <i>blockchain payment network security</i> was accepted by <b>IEEE INFOCOM 2021</b> (AR: 252/1266=19.9%). Congratulations to all!
+            </li>
+            
+            <li>Our grant proposal on <i>robust SLA guarantees in mobile edge computing</i> was funded by NSF. Thanks to NSF!
+            </li>
+            
+            <li>I will continue to serve as the Workshop Co-Chair for IEEE IPCCC 2021 to be held in Austin, Texas.
+            </li>
+            
+            <li>I am serving as a TPC member for IEEE INFOCOM 2021 to be held in Vancouver, Canada.
+            </li>
+        
+            <!--li><b style="color:red;">CIFellows 2020</b>: 
+                Application for <span style="color:red;">CRA/NSF-funded <b>Postdoc</b> position</span> is open. If you are a new US-based PhD looking for a Postdoc position, and have interest to work at NC State, please feel free to reach me via email. More information can be found at <a href="https://cifellows2020.org/">https://cifellows2020.org/</a>.
+            </li-->
+            
+            <li>I am serving as the Workshop Co-Chair for IEEE IPCCC 2020 to be held in Austin, Texas. <!--Please consider submitting your workshop proposals by June 22, 2020. More information can be found in this <a href="https://www.ipccc.org/ipccc2020/IPCCC%202020%20Workshop%20Call%20for%20Proposals.pdf">IPCCC 2020 Call for Workshop Proposals</a>. Thanks!-->
+            </li>
+
+            <li>Our paper on <i>edge resource provisioning</i> was accepted by <b>ACM Mobihoc 2020</b> (AR: 30/195=15%). Congratulations to all!
+            </li>
+
+            <li>Our paper on <i>anonymous reputation system</i> was accepted by <b>IEEE CNS 2020</b> (AR: 43/151=28%). Congratulations to all!
+            </li>
+            
+            <li>I was elected as a Distinguished TPC Member for IEEE INFOCOM 2020. Thanks, peers!
+            </li>
+            
+            
+        </ul>
+    </div>
+
+
+
+
+    <hr />
+
+
+
+    <!---------------------------->
+
+    
+    <h2 class="page_title" id="title_research">Research</h2>
+    
+    
+    
+    <!-- - - - - Add Biographpy BELOW Here - - - - - -->
+
+
+    
+    <p style='margin-bottom:1em'>
+        <strong><u>Vision</u></strong> 
+        My research goal is to design and build high-performance, robust and usable systems for modern smart and connected communities, including smart homes, intelligent cities, and everything in between and beyond. Challenges exist in dimensions including scale, heterogeneity, reliability, security and usability, and my research focuses on developing techniques against them stemming from the Internet-of-Things, cloud and edge computing, wireless and mobile networks, security and privacy, data analytics and machine learning, network economics, and the blockchain. The complexity of modern intelligent systems is enormous, but because of this the possibilities for research are infinite!
+    </p>
+    <!--br /-->
+
+    <p style='margin-bottom:1em'>
+        <strong><u>Methodology</u></strong> 
+        Typical Computer Science research (in most areas) divides into two categories: <i>systems</i> and <i>theory</i>. Systems research focuses on building actual systems or components of a system in seek for practical enhancement over the state-of-the-arts, while theoretical research is meant to abstract systems with mathematical modeling to reflect, generalize, optimize, and explore the limits of, what an actual system can achieve. Since both are eventually to serve the <i>applications</i>, i.e., what can benefit our world in the end, I am interested in pursuing, not the divided efforts in either, but the combined research of both theory and systems, for the joint good of both. I call it <i>Research on Integrated Theory And Systems (RITAS)</i>.
+    </p>
+    <!--br /-->
+
+    <p style='margin-bottom:1em'>
+        <strong><u>Toolset</u></strong> 
+        My research toolset has been developed around the core of RITAS. On the theory side, I am proficient with modeling, optimization, and algorithm design. These include (but are not limited to) linear programming, mixed integer programming, (non-)convex optimization, network flow, approximation algorithms and schemes, and robust design and optimization. On the system side, I am comfortable interacting with network devices (switches, routers, APs), IoT platforms (Raspberry Pi), real-world network simulators/emulators (NS-3, Mininet), and blockchains (Bitcoin, Ethereum), besides numerous other networked systems and applications. My toolset is never static and constantly growing, with new candidates including statistical modeling and optimization, blackbox optimization, deep reinforcement learning, crypto analysis and provable security, and risk management.
+        <u>If your research requires any of these tools and you see potential collaborations, shoot me an email and I will respond the soonest I can.</u>
+    </p>
+    <!--br /-->
+    
+ 
+    
+    <!-- - - - - Add Biography ABOVE Here - - - - - - -->
+    
+    
+    
+    <!--div class="cv_resume">
+        <h2 class="subtitle">CV/Resume</h2>
+        <a href="myResume.docx">Link to CV</a>
+    </div-->
+    
+    <div class="education">
+        <h2 class="subtitle">Education</h2>
+        
+        
+        
+            <p class="edu"><!-- Add Education Here -->PhD in Computer Science,  Arizona State University,  2019
+            </p>
+            
+            <!--p class="edu"><!- - Add Education Here - ->MS    1975  Mathematics,  University of Illinois, Urbana-Champaign
+            </p-->
+            
+            <p class="edu"><!-- Add Education Here-->BS in Computer Science,  Beijing University of Posts and Telecommunications,  2013
+            </p>
+            
+        
+    </div>
+    
+    <div class="awards">
+        <h2 class="subtitle">Awards</h2>
+        <ul>
+        
+        
+            <li><!-- Add Award Here -->2022 IEEE INFOCOM Distinguished TPC Member
+            </li>
+        
+            <li><!-- Add Award Here -->2021 NSF CAREER Award
+            </li>
+        
+            <li><!-- Add Award Here -->2020 IEEE INFOCOM Distinguished TPC Member
+            </li>
+        
+            <li><!-- Add Award Here -->2018 Exemplary Reviewer of IEEE Transactions on Wireless Communications (TWC)
+            </li>
+        
+            <li><!-- Add Award Here -->2018 IEEE INFOCOM Best Paper Finalists (9/309)
+            </li>
+
+            <li><!-- Add Award Here -->2017 IEEE EDGE Best Student Paper
+            </li>
+            
+            
+            
+        </ul>
+    </div>
+    
+    <div class="awards">
+        <h2 class="subtitle">Contact Me</h2>
+        <ul>
+        
+        
+
+            <li>Office: 2268 Engineering Building II (EBII), 890 Oval Dr, Raleigh, NC 27606
+            </li>
+
+            <li>Phone: 919-515-7938
+            </li>
+        
+            <li>Email: <a href="mailto:ryu5@ncsu.edu"><!-- Add EMAIL Here -->ryu5 [at] ncsu [dot] edu</a>
+            </li>
+            
+            <li><strong>About email:</strong> I try my best to reply to emails in-time. But due to their large volume, I apologize that I will NOT be able to reply to ALL emails. </li>
+            <ul>
+                <li>For colleagues, please knock on my door at any time.</li>
+                <li>For students, please see me during office hours or appointed times, or send me an email based on specific instructions I gave in class or on <a href="students.php">this website</a>.</li>
+            </ul>
+            
+        </ul>
+    </div>
+    
+    </div><!-- end content -->
+</div><!-- end mid -->
+</div><!-- end main -->
+
+<div id="clearfooter"></div>
+<!-- end of wrapper -->
+
+<!-- footer -->
+<!--?php include_once("footer.php");?-->
+<include src="footer.html"></include>
+
+<script>
+  window.onload = toggleNews();
+</script>
+
+</body>
+</html>

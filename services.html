@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Ruozhou Yu @ NCSU</title>
+<!-- News JS function -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+<script type="text/JavaScript">
+    document.addEventListener("DOMContentLoaded",function(){
+        function addx(incl, idx){
+            fetch(incl).then(incl=>incl.text()).then(incl=>idx(incl))
+        }
+        let incl = document.getElementsByTagName("include");
+        for(var i = 0; i < incl.length; i++){
+            let x = incl[i];
+            addx(incl[i].attributes.src.value,function(incl){
+                x.insertAdjacentHTML("afterend", incl), x.remove()
+            })
+        }
+    });
+</script>
+</head>
+
+<!-- top of page content -->
+<!--?php include_once("heading.php");?-->
+<include src="heading.html"></include>
+
+ <div class="content">
+    
+    <h2 class="page_title">Services</h2>
+  
+
+    
+    <div class="r_areas">
+        <h3 class="subtitle">Conference Organization</h3>
+        <ul>
+          <li>General Vice Co-Chair @ IEEE IPCCC 2022</li>
+          <li>Web Co-Chair @ IEEE INFOCOM 2022, 2023</li>
+          <li>Workshop Co-Chair @ IEEE IPCCC 2020, 2021</li>
+        </ul>
+    </div>
+  
+
+    
+    <div class="r_areas">
+        <h3 class="subtitle">Workshop Organization</h3>
+        <ul>
+          <li>TPC Co-Chair @ Workshop on Pervasive Network Intelligence for 6G Networks (PerAI-6G), co-located with IEEE INFOCOM 2022</li>
+        </ul>
+    </div>
+  
+
+    
+    <div class="r_areas">
+        <h3 class="subtitle">Session Chair</h3>
+        <ul>
+          <li>IEEE INFOCOM 2020, 2021, 2022</li>
+          <li>IEEE IPCCC Workshops 2021, 2022</li>
+        </ul>
+    </div>
+  
+
+    
+    <div class="r_areas">
+        <h3 class="subtitle">Conference TPC</h3>
+        <ul>
+          <li>IEEE INFOCOM 2020, 2021, 2022, 2023</li>
+          <li>IEEE CNS 2022</li>
+          <li>IEEE HiPC 2022</li>
+          <li>EAI MONAMI 2021</li>
+        </ul>
+    </div>
+  
+
+    
+    <div class="r_areas">
+        <h3 class="subtitle">Journal Editorship</h3>
+        <ul>
+          <li>Guest Editor, IEEE Open Journal of the Computer Society, Special Section on Emerging Techniques for Future Smart Cities after COVID-19, 2021</li>
+        </ul>
+    </div>
+	
+
+    
+    <div class="r_areas">
+        <h3 class="subtitle">Journal Reviewer</h3>
+        <ul>
+          <li>IEEE/ACM Transactions on Networking</li>
+          <li>IEEE Transactions on Mobile Computing</li>
+          <li>IEEE Journal on Selected Areas in Communications</li>
+          <li>IEEE Transactions on Wireless Communications</li>
+          <li>IEEE Transactions on Parallel and Distributed Systems</li>
+          <li>IEEE Transactions on Software Engineering</li>
+          <li>IEEE Transactions on Communications</li>
+          <li>IEEE Transactions on Cloud Computing</li>
+          <li>IEEE Transactions on Vehicular Technology</li>
+          <li>IEEE Internet of Things Journal</li>
+          <li>IEEE Transactions on Network and Service Management</li>
+          <li>IEEE Transactions on Services Computing</li>
+          <li>IEEE Network</li>
+          <li>IEEE Communications Letters</li>
+          <li>IEEE Access</li>
+          <li>Elsevier Journal of Network and Computer Applications</li>
+          <li>Springer Journal of Network and Systems Management</li>
+          <li>KSII Transactions on Internet and Information Systems</li>
+          <li>KICS Journal of Communications and Networks</li>
+          <li>IET Communications</li>
+          <li>IET Networks</li>
+        </ul>
+    </div>
+
+
+
+
+
+
+    
+    <h2 class="page_title">Memberships</h2>
+    <div class="r_areas">
+        <ul>
+          <li>IEEE: Student'14, Member'19, Senior Member'21</li>
+          <li>ACM: Member'19</li>
+          <li>USENIX: Member'20</li>
+        </ul>
+    </div>
+    
+    </div><!-- end content -->
+</div><!-- end mid -->
+</div><!-- end main -->
+
+
+<div id="clearfooter"></div>
+<!-- end of wrapper -->
+
+
+<!-- footer -->
+<!--?php include_once("footer.php");?-->
+<include src="footer.html"></include>
+
+</body>
+</html>

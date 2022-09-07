@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Ruozhou Yu @ NCSU</title>
+<!-- News JS function -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+<script type="text/JavaScript">
+    document.addEventListener("DOMContentLoaded",function(){
+        function addx(incl, idx){
+            fetch(incl).then(incl=>incl.text()).then(incl=>idx(incl))
+        }
+        let incl = document.getElementsByTagName("include");
+        for(var i = 0; i < incl.length; i++){
+            let x = incl[i];
+            addx(incl[i].attributes.src.value,function(incl){
+                x.insertAdjacentHTML("afterend", incl), x.remove()
+            })
+        }
+    });
+</script>
+</head>
+
+<!-- top of page content -->
+<!--?php include_once("heading.php");?-->
+<include src="heading.html"></include>
+
+ <div class="content">
+    
+    <h2 class="page_title">Robust SLAs for Mobile Edge Computing Applications</h2>
+	
+    
+    <!-- Add RESEARCH Description Here -->
+    
+    <p>This project is supported by NSF Award <a href="https://nsf.gov/awardsearch/showAward?AWD_ID=2007391">#2007391</a> and <a href="https://nsf.gov/awardsearch/showAward?AWD_ID=2007469">#2007469</a> (2020/10/01-2023/09/30): <br />
+      <span>Collaborative Research: CNS Core: Small: Robust Resource Planning and Orchestration to Satisfy End-to-End SLA Requirements in Mobile Edge Networks</span>
+    </p>
+
+
+
+
+
+    
+    <div class="r_cur_projs">
+        <table>
+
+          <!---------------------------------------------------------------------------->
+          <!-- Project description -->
+          <tr><td colspan="2">
+            <hr />
+            <div class="subtitle">Project Description</div>
+          </td></tr>
+          <tr>
+            <td><img src="images/project_robust_sla.png" class="r_cur_projs_image" /></td>
+            <td class="r_cur_projs_text">
+              Mobile edge computing has emerged to address the long latency, low throughput, and unpredictability of cloud computing for serving modern mobile applications. Nevertheless, the lack of end-to-end performance guarantee in the form of service-level agreements (SLAs) can lead to performance degradation of critical applications during unexpected system dynamics, rendering these applications incompetent or unsafe to use. This project seeks to develop mathematical and systematic tools for edge providers to quantify and control, the risk associated with providing end-to-end SLAs for mobile applications. By designing multi-dimensional resource planning and orchestration algorithms that bound or minimize the risk associated with edge SLAs, this project aims to enable and enhance life-changing edge applications such as autonomous driving and mobile vision, promote investment and expedite development in mobile edge computing, and broaden awareness of risk management from a system perspective.
+            </td>
+          </tr>
+
+
+
+
+          <!---------------------------------------------------------------------------->
+          <!-- Personnel -->
+          <tr><td colspan="2">
+            <hr />
+            <div class="subtitle">Personnel</div>
+          </td></tr>
+          <tr>
+            <td class="proj_personnel"><img src="images/PIC-XUE.jpg" class="proj_personnel_img" /><br />Dr. Guoliang Xue<br />PI@ASU</td>
+            <td class="proj_personnel"><img src="images/PIC-YU.jpg" class="proj_personnel_img" /><br />Dr. Ruozhou Yu<br />PI@NCSU</td>
+          </tr>
+
+
+
+
+          <!---------------------------------------------------------------------------->
+          <!-- Publications -->
+          <tr><td colspan="2">
+            <hr />
+            <div class="subtitle">Publications</div>
+          </td></tr>
+          <tr>
+            <td colspan="2"><ul>
+              <li><span class="pub_title">Data-Driven Edge Resource Provisioning for Inter-Dependent Microservices with Dynamic Load</span>
+                  <br />
+                  <span class="pub_author"><span class="pub_me">Ruozhou Yu</span>, <span class="pub_stu">Szu-Yu Lo</span>*, <span class="pub_stu">Fangtong Zhou</span>*, Guoliang Xue</span>
+                  <br />
+                  <span class="pub_pubtxt">In <span class="pub_pub">IEEE Global Communications Conference (GLOBECOM)</span>, 2021.</span>
+              </li>
+            </ul></td>
+          </tr>
+
+
+
+
+          <!---------------------------------------------------------------------------->
+          <!-- Datasets -->
+          <tr><td colspan="2">
+            <hr />
+            <div class="subtitle">Datasets and Artifacts</div>
+          </td></tr>
+          <tr class="dataset_entry">
+            <td colspan="2">
+              - YOLO object detection microservice CPU & memory profiling (regression) 
+              [<a href="project_robust_sla/21-6-7-yolo-profiling.pdf">Fig</a>]
+              [Raw data and code will be available soon]
+            </td>
+          </tr>
+          <tr class="dataset_entry">
+            <td colspan="2">
+              - Social network (<a href="https://github.com/delimitrou/DeathStarBench">DeathStarBench</a>) application: network traffic profiling data
+              [<a href="project_robust_sla/21-6-15-social-net-pcap-data.zip">Dataset</a>]
+            </td>
+          </tr>
+
+
+
+        </table>
+    </div>
+    
+    </div><!-- end content -->
+</div><!-- end mid -->
+</div><!-- end main -->
+
+
+<div id="clearfooter"></div>
+<!-- end of wrapper -->
+
+
+<!-- footer -->
+<!--?php include_once("footer.php");?-->
+<include src="footer.html"></include>
+
+</body>
+</html>

@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Ruozhou Yu @ NCSU</title>
+<!-- News JS function -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+<script type="text/JavaScript">
+    document.addEventListener("DOMContentLoaded",function(){
+        function addx(incl, idx){
+            fetch(incl).then(incl=>incl.text()).then(incl=>idx(incl))
+        }
+        let incl = document.getElementsByTagName("include");
+        for(var i = 0; i < incl.length; i++){
+            let x = incl[i];
+            addx(incl[i].attributes.src.value,function(incl){
+                x.insertAdjacentHTML("afterend", incl), x.remove()
+            })
+        }
+    });
+</script>
+</head>
+
+<!-- top of page content -->
+<!--?php include_once("heading.php");?-->
+<include src="heading.html"></include>
+
+ <div class="content">
+    
+    <h2 class="page_title">WolfPack: Application-Network Co-Design for Edge Resource Provisioning</h2>
+	
+    
+    <!-- Add RESEARCH Description Here -->
+    
+    <p>This project is supported by NSF CAREER Award <a href="https://nsf.gov/awardsearch/showAward?AWD_ID=2045539">#2045539</a> (2021/07/01-2026/06/30): <br />
+      <span></span>
+    </p>
+
+
+
+
+    <hr />
+    <p>
+      <span style="color:red">This project is recruiting <b>undergraduate students</b></span> interested in edge computing, microservices, and machine learning applications.
+    </p>
+    <p>
+      Selected students will be developing microservice-based applications and measurement frameworks for testing the performance of microservices under different computing and network configurations, under guidance by current graduate students. Students can receive CSC 498/499 credits, and/or NSF REU funding from one of the PI’s NSF projects.
+    </p>
+    <p>
+      An ideal candidate may have (or is <i>en route</i> learning) skills for network programming (socket, TCP/IP, etc.). Experiences with Linux containers and Kubenetes are a plus. Expected level of efforts is 10 to 15 hours a week for the project. To receive NSF REU funding, a student is required to be a US citizen or a permanent resident.
+    </p>
+
+      <tr>
+        <td colspan="2"><ul>
+          <li>
+            <b>Recruitment open for:</b> Summer 2022, Fall 2022.
+          </li>
+          <li>
+            <b>Interested applicants:</b> please send your CV and transcripts to Mr. Zhouyu Li (zli85@ncsu.edu) and Dr. Ruozhou Yu (ryu5@ncsu.edu).
+          </li>
+        </ul></td>
+      </tr>
+      
+
+    
+
+
+
+    
+    <div class="r_cur_projs">
+        <table>
+
+          <!---------------------------------------------------------------------------->
+          <!-- Project description -->
+          <tr><td colspan="2">
+            <hr />
+            <div class="subtitle">Project Description</div>
+          </td></tr>
+          <tr>
+            <td><img src="images/project_wolfpack.png" class="r_cur_projs_image" /></td>
+            <td class="r_cur_projs_text">
+              Modern distributed computing applications have extremely complex structures. Examples include microservice-based applications such as Twitter, Netflix, Uber, and IoT, which can consist of thousands of microservices, loosely coupled through API calls. Such structural complexity poses significant challenges when these applications are looking to leverage edge computing, our next-gen computing paradigm, which provides low-latency and high-throughput computing proximal to end users. This project addresses the performance issue of large-scale distributed applications by employing an application-network co-design approach: <i>simultaneously configuring computing and networking resources for end-to-end performance guarantee</i>. Two developments will result from this project: the WolfPack, a theoretical framework for app-network co-design optimization; and the WolfBench, a systematic benchmark for app-network co-designed applications in realistic edge computing environments.
+            </td>
+          </tr>
+
+
+
+
+          <!---------------------------------------------------------------------------->
+          <!-- Personnel -->
+          <tr><td colspan="2">
+            <hr />
+            <div class="subtitle">Personnel</div>
+          </td></tr>
+          <tr>
+            <td class="proj_personnel"><img src="images/PIC-YU.jpg" class="proj_personnel_img" /><br />Dr. Ruozhou Yu<br />PI@NCSU</td>
+          </tr>
+
+
+
+
+          <!---------------------------------------------------------------------------->
+          <!-- Publications -->
+          <tr><td colspan="2">
+            <hr />
+            <div class="subtitle">Publications</div>
+          </td></tr>
+          <tr>
+            <td colspan="2"><ul>
+              <li><span class="pub_title">Data-Driven Edge Resource Provisioning for Inter-Dependent Microservices with Dynamic Load</span>
+                  <br />
+                  <span class="pub_author"><span class="pub_me">Ruozhou Yu</span>, <span class="pub_stu">Szu-Yu Lo</span>*, <span class="pub_stu">Fangtong Zhou</span>*, Guoliang Xue</span>
+                  <br />
+                  <span class="pub_pubtxt">In <span class="pub_pub">IEEE Global Communications Conference (GLOBECOM)</span>, 2021.</span>
+              </li>
+              <li><span class="pub_title">Edge-Assisted Collaborative Perception in Autonomous Driving: A Reflection on Communication Design</span>
+                  <br />
+                  <span class="pub_author"><span class="pub_me">Ruozhou Yu</span>, Dejun Yang, Hao Zhang</span>
+                  <br />
+                  <span class="pub_pubtxt">In <span class="pub_pub">ACM/IEEE Symposium on Edge Computing (SEC) Workshops</span>, 2021.</span>
+              </li>
+              <li>Two papers under review will be posted once accepted for publication.
+              </li>
+            </ul></td>
+          </tr>
+
+
+
+
+          <!---------------------------------------------------------------------------->
+          <!-- Datasets -->
+          <tr><td colspan="2">
+            <hr />
+            <div class="subtitle">Datasets and Artifacts</div>
+          </td></tr>
+          <tr>
+            <td colspan="2"><ul>
+              <li>C-V2X NS-3 simulator with collaborative perception 
+                [<a href="https://github.com/ruozhouy/ns-3_c-v2x">GitHub</a>]
+              </li>
+            </ul></td>
+          </tr>
+          <tr>
+            <td colspan="2"><ul>
+              <li>Other code and datasets will be available once cleaned and documented.
+              </li>
+            </ul></td>
+          </tr>
+
+
+
+        </table>
+    </div>
+    
+    </div><!-- end content -->
+</div><!-- end mid -->
+</div><!-- end main -->
+
+
+<div id="clearfooter"></div>
+<!-- end of wrapper -->
+
+
+<!-- footer -->
+<!--?php include_once("footer.php");?-->
+<include src="footer.html"></include>
+
+</body>
+</html>

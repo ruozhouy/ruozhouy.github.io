@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Ruozhou Yu @ NCSU</title>
+<!-- News JS function -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+<script type="text/JavaScript">
+    document.addEventListener("DOMContentLoaded",function(){
+        function addx(incl, idx){
+            fetch(incl).then(incl=>incl.text()).then(incl=>idx(incl))
+        }
+        let incl = document.getElementsByTagName("include");
+        for(var i = 0; i < incl.length; i++){
+            let x = incl[i];
+            addx(incl[i].attributes.src.value,function(incl){
+                x.insertAdjacentHTML("afterend", incl), x.remove()
+            })
+        }
+    });
+</script>
+</head>
+
+<!-- top of page content -->
+<!--?php include_once("heading.php");?-->
+<include src="heading.html"></include>
+
+ <div class="content">
+    
+    <h2 class="page_title">Research</h2>
+	
+    
+    <!-- Add RESEARCH Description Here -->
+    
+    <p>[In Construction] I'm trying to find time to write about my general research vision, methods and interests. Before that, please refer to the About Me page for a brief description of my research.</p>
+
+
+
+
+
+    
+    <div class="r_areas">
+        <h2 class="subtitle">Research Interests</h2>
+        <ul class='two_column_ul pub_me'>
+        
+        
+          <li><!-- Add RESEARCH AREA Here -->Internet-of-Things
+          </li>
+          
+          <li><!-- Add RESEARCH AREA Here -->Cloud / edge computing
+          </li>
+          
+          <li><!-- Add RESEARCH AREA Here -->Wireless / mobile networks
+          </li>
+          
+          <li><!-- Add RESEARCH AREA Here -->Cybersecurity and privacy
+          </li>
+          
+          <li><!-- Add RESEARCH AREA Here -->Blockchain
+          </li>
+        
+        
+          <li><!-- Add RESEARCH AREA Here -->Network design
+          </li>
+          
+          <li><!-- Add RESEARCH AREA Here -->Algorithms and analysis
+          </li>
+          
+          <li><!-- Add RESEARCH AREA Here -->Optimization
+          </li>
+          
+          <li><!-- Add RESEARCH AREA Here -->Robustness and survivability
+          </li>
+          
+          <li><!-- Add RESEARCH AREA Here -->Network economics
+          </li>
+          
+          
+        </ul>
+    </div>
+    
+    </div><!-- end content -->
+</div><!-- end mid -->
+</div><!-- end main -->
+
+
+<div id="clearfooter"></div>
+<!-- end of wrapper -->
+
+
+<!-- footer -->
+<!--?php include_once("footer.php");?-->
+<include src="footer.html"></include>
+
+</body>
+</html>
