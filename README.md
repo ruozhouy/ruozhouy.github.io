@@ -1,2 +1,1 @@
-# ruozhou-yu.github.io
-Personal academic website of Dr. Ruozhou Yu
+# Personal academic website of Dr. Ruozhou Yu
